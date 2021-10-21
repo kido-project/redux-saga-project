@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Component } from 'react';
+import Stack from '@mui/material/Stack';
+import IconButton from '@mui/material/IconButton';
+import Fingerprint from '@mui/icons-material/Fingerprint';
+class App extends Component {
+  render () {
+    return (
+      <Stack direction="row" spacing={1}>
+      <IconButton aria-label="fingerprint" color="primary">
+        <Fingerprint />
+      </IconButton>
+      <IconButton aria-label="fingerprint" color="success">
+        <Fingerprint />
+      </IconButton>
+    </Stack>
+    )
+  }
 }
 
 export default App;
