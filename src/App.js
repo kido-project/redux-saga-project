@@ -1,18 +1,14 @@
 import { Component } from 'react';
-import Stack from '@mui/material/Stack';
-import IconButton from '@mui/material/IconButton';
-import Fingerprint from '@mui/icons-material/Fingerprint';
+import { ThemeProvider } from '@mui/material/styles';
+import TaskBoard from './containers/TaskBoard';
+import theme from './commons/Theme/index';
+
 class App extends Component {
   render () {
     return (
-      <Stack direction="row" spacing={1}>
-      <IconButton aria-label="fingerprint" color="primary">
-        <Fingerprint />
-      </IconButton>
-      <IconButton aria-label="fingerprint" color="success">
-        <Fingerprint />
-      </IconButton>
-    </Stack>
+      <ThemeProvider theme={theme}>
+        <TaskBoard />
+      </ThemeProvider>
     )
   }
 }
